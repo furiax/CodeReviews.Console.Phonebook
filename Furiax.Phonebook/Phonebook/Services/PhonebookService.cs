@@ -57,13 +57,13 @@ internal class PhonebookService
                 name = AnsiConsole.Ask<string>("Contact's name:");
                 if (!Validation.DoesNameAlreadyExists(name))
                     contact.Name = name;
-				else
-				{
-					Console.ForegroundColor = ConsoleColor.Red;
-					Console.WriteLine("A contact with this name already exists, please enter a diffrent name");
-					Console.ForegroundColor = ConsoleColor.White;
-				}
-			} while (Validation.DoesNameAlreadyExists(name));
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("A contact with this name already exists, please enter a diffrent name");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+            } while (Validation.DoesNameAlreadyExists(name));
 
             string phoneNumber;
             do
@@ -149,8 +149,8 @@ internal class PhonebookService
             }
             if (AnsiConsole.Confirm("Update category ?"))
             {
-				contact.CategoryId = CategoryService.GetCategoryOptionInput().CategoryId;
-			}
+                contact.CategoryId = CategoryService.GetCategoryOptionInput().CategoryId;
+            }
             PhonebookController.UpdateContact(contact);
             Console.Clear();
         }

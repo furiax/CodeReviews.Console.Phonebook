@@ -24,14 +24,14 @@ namespace Phonebook.Helpers
         }
         internal static bool DoesNameAlreadyExists(string name)
         {
-			var contacts = PhonebookController.GetContacts();
+            var contacts = PhonebookController.GetContacts();
             foreach (var contact in contacts)
             {
                 if (contact.Name.ToLower() == name.ToLower())
                     return true;
             }
             return false;
-		}
+        }
 
     }
 }

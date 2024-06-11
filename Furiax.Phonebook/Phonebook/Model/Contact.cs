@@ -9,7 +9,7 @@ internal class Contact
     [Key]
     public int ContactId { get; set; }
     [Required]
-    public string  Name { get; set; }
+    public string Name { get; set; }
     [Required]
     public string PhoneNumber { get; set; }
     [Required]
